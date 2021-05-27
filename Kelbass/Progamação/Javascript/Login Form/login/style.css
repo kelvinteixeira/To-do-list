@@ -38,6 +38,8 @@ input[type="email"] {
   margin: 10px 0;
   border-radius: 10px;
   background-color: transparent;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 input[type="submit"] {
@@ -51,6 +53,7 @@ input[type="submit"] {
   transition: 1s;
   margin-left: 30%;
   font-weight: bold;
+  margin-top: 10%;
 }
 
 form input[type="text"]:focus {
@@ -92,4 +95,13 @@ a {
 
 a:hover{
   color: rgb(23, 16, 31);
+}
+
+.fa-eye {
+  position: absolute;
+  top: 135px;
+  right: 40px;
+  height: 15px;
+  cursor: pointer;
+  color: rgb(55, 28, 80);
 }

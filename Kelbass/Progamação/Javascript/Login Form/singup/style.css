@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: rgb(55, 28, 80);
+  }
+  
+  form {
+    background-color: rgb(177, 177, 228);
+    max-width: 500px;
+    border-radius: 10px;
+    width: 55%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 1px 0px #00000070;
+  }
+  
+  h3 {
+    text-align: center;
+    color: rgb(55, 28, 80);
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  
+  input[type="submit"] {
+    width: 40%;
+    height: 40px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(55, 28, 80);
+    color: white;
+    border-radius: 20px;
+    transition: 1s;
+    margin-left: 30%;
+    font-weight: bold;
+    margin-top: 5%;
+  }
+  
+  form input[type="text"]:focus {
+    outline: 0;
+  }
+  form input[type="password"]:focus {
+    outline: 0;
+  }
+  form input[type="email"]:focus {
+    outline: 0;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: rgb(23, 16, 31);
+  }
+
+  .fa-eye {
+    position: absolute;
+    top: 260px;
+    right: 40px;
+    height: 15px;
+    cursor: pointer;
+    color: rgb(55, 28, 80);
+  }
+
+  .confirm  {
+    position: absolute;
+    top: 330px;
+    right: 40px;
+    height: 15px;
+    cursor: pointer;
+    color: rgb(55, 28, 80);
+  }
