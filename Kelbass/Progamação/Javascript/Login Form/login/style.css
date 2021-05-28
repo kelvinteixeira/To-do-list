@@ -20,7 +20,7 @@ body {
 }
 
 form {
-  background-color: #B1B1E199; 
+  background-color: #b1b1e199;
   max-width: 300px;
   border-radius: 10px;
   width: 55%;
@@ -90,7 +90,6 @@ p {
   font-weight: bold;
   margin-bottom: 2%;
   color: rgb(55, 28, 80);
-  
 }
 
 a {
@@ -100,25 +99,25 @@ a {
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s ease-out
+  transition: 0.3s ease-out;
 }
 
-a:hover{
+a:hover {
   color: rgb(23, 16, 31);
 }
 
 .fa-eye {
   position: absolute;
-  top: 135px;
-  right: 40px;
+  top: 38%;
+  right: 11%;
   height: 15px;
   cursor: pointer;
   color: rgb(55, 28, 80);
 }
 
 .container {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 img {
@@ -133,6 +132,17 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
 }
 
+#msgLogin {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb80;
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+}

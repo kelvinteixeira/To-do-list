@@ -11,16 +11,16 @@
 </head>
 
 <body>
-
-<!--   
-  <img src="../images/logo.png" alt="One Piece logo"> -->
   
   <form accept="login" method="POST">
     <h3>Sing in</h3>
+
+    
     <input id="usuario" type="text" placeholder="Username" autocomplete="off">
     <input id="password" type="password" placeholder="Password">
     <i class="fa fa-eye" aria-hidden="true"></i>
-    <button id="login">Login</button>
+    <div id="msgLogin"></div>
+    <button onclick="login()" type="button">Login</button>
     <hr>
       <p>Don't have an account?</p>
       <a style="font-size: 14px;" href="../singup/index.html">Sing Up!</a>

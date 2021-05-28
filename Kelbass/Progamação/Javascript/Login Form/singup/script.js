@@ -121,7 +121,12 @@ function validacaoEmail(email) {
 
 function singup() {
   if (validName && validEmail && validUsername && validPasswordSingup && validPasswordSingupConfirm) {
-
+    
+    msgSuccess.setAttribute('style', 'display: block')
+    msgSuccess.innerHTML = 'Cadastrando usuário...'
+    msgError.setAttribute('style', 'display: none')
+    msgError.innerHTML= ''
+    
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
     listaUser.push({
       nameStorage: nome.value,
@@ -132,13 +137,9 @@ function singup() {
 
     localStorage.setItem('listaUser', JSON.stringify(listaUser))
 
-    msgSuccess.setAttribute('style', 'display: block')
-    msgSuccess.innerHTML = 'Cadastrando usuário...'
-    msgError.setAttribute('style', 'display: none')
-    msgError.innerHTML= ''
 
     setTimeout(() => {
-      window.location.href = 'http://127.0.0.1:5500/login/index.html'
+      window.location.href = '../login/index.html'
     }, 3000)
   } else {
     msgError.setAttribute('style', 'display: block')
