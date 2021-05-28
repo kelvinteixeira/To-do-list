@@ -12,15 +12,17 @@
 
 <body>
 
+  <img src="../images/logo.png" alt="One Piece logo">
+  
   <form accept="login" method="POST">
     <h3>Sing in</h3>
-    <input id="usuario" type="text" placeholder="Username">
+    <input id="usuario" type="text" placeholder="Username" autocomplete="off">
     <input id="password" type="password" placeholder="Password">
     <i class="fa fa-eye" aria-hidden="true"></i>
-    <input id="enviar" type="submit" value="Login" onclick="logar()">
+    <input id="login" type="submit" value="Login">
     <hr>
       <p>Don't have an account?</p>
-      <a style="font-size: 14px;" href="http://127.0.0.1:5500/Singup/singup.html">Sing Up!</a>
+      <a style="font-size: 14px;" href="../singup/index.html">Sing Up!</a>
   </form>
 
   <script src="../login/script.js"></script>

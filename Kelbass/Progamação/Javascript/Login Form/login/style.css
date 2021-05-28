@@ -9,9 +9,15 @@ body {
   background-color: rgb(55, 28, 80);
 }
 
+::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
 form {
-  background-color: rgb(177, 177, 228);
-  max-width: 500px;
+  background-color: #B1B1E199; 
+  max-width: 400px;
   border-radius: 10px;
   width: 55%;
   padding: 20px;
@@ -105,3 +111,24 @@ a:hover{
   cursor: pointer;
   color: rgb(55, 28, 80);
 }
+
+.container {
+ display: flex;
+ justify-content: center;
+}
+
+img {
+  width: 80%;
+
+  opacity: 40%;
+  max-width: 500px;
+  border-radius: 10px;
+  width: 55%;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
