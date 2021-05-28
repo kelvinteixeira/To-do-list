@@ -18,16 +18,18 @@ let spanPasswordSingup = document.querySelector('#spanPasswordSingup');
 let validPasswordSingup = false;
 
 let passwordSingupConfirm = document.querySelector('#passwordSingupConfirm');
-let spanPasswordSingupConfirm = document.querySelector('#spanPasswordSingupConfirm');
+let spanPasswordSingupConfirm = document.querySelector('#spanPasswordSingupConfirm')
 let validPasswordSingupConfirm = false;
 
 nome.addEventListener('keyup', () => {
   if (nome.value.length < 3) {
     nome.setAttribute('style', 'border-color: red');
     spanName.setAttribute('style', 'display: block');
+    validName = false;
   } else {
     nome.setAttribute('style', 'border-color: green');
     spanName.setAttribute('style', 'display: none');
+    validName = true;
   }
 });
 
@@ -39,9 +41,11 @@ username.addEventListener('keyup', () => {
   if (username.value.length <= 4) {
     username.setAttribute('style', 'border-color: red');
     spanUsername.setAttribute('style', 'display: block');
+    validUsername = false;
   } else {
     username.setAttribute('style', 'border-color: green');
     spanUsername.setAttribute('style', 'display: none');
+    validUsername = true;
   }
 });
 
@@ -49,9 +53,11 @@ passwordSingup.addEventListener('keyup', () => {
   if (passwordSingup.value.length <= 5) {
     passwordSingup.setAttribute('style', 'border-color: red');
     spanPasswordSingup.setAttribute('style', 'display: block');
+    validPasswordSingup = false;
   } else {
     passwordSingup.setAttribute('style', 'border-color: green');
     spanPasswordSingup.setAttribute('style', 'display: none');
+    validPasswordSingup = true;
   }
 });
 
@@ -59,9 +65,11 @@ passwordSingupConfirm.addEventListener('keyup', () => {
   if (passwordSingupConfirm.value != passwordSingup.value) {
     passwordSingupConfirm.setAttribute('style', 'border-color: red');
     spanPasswordSingupConfirm.setAttribute('style', 'display: block');
+    validPasswordSingupConfirm = false;
   } else {
     passwordSingupConfirm.setAttribute('style', 'border-color: green');
     spanPasswordSingupConfirm.setAttribute('style', 'display: none');
+    validPasswordSingupConfirm = true;
   }
 });
 
@@ -100,8 +108,19 @@ function validacaoEmail(email) {
     (dominio.lastIndexOf(".") < dominio.length - 1)) {
       email.setAttribute('style', 'border-color: green')
       spanEmail.setAttribute('style','display: none')
+      validEmail = true;
   } else {
     email.setAttribute('style', 'border-color: red')
     spanEmail.setAttribute('style', 'display: block')
+    validEmail = false;
   }
+}
+
+function singup() {
+  if (validName && validEmail && validUsername && validPasswordSingup && validPasswordSingupConfirm) {
+    alert('Cadastro efetuado com sucesso');
+  } else {
+    alert('Dados incorretos!')
+  }
+  
 }
