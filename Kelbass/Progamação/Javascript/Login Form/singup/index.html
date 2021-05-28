@@ -16,13 +16,23 @@
     <form>
         <h3>Sing up formulary</h3>
 
+
         <input id="name" type="text" placeholder="name" autocomplete="off">
+        <span class="msg-error" id="spanName" style="display: none;">Mínimo de 3 caracteres</span>
+
         <input id="email" type="email" placeholder="email" autocomplete="off">
-        <label id="labelEmail" for="email"></label>
-        <input id="username" type="text" placeholder="username" autocomplete="off">
+        <span class="msg-error" id="spanEmail" style="display: none;">Email inválido</span>
+
+        <input id="username" type="text" placeholder="pirate username" autocomplete="off">
+        <span class="msg-error" id="spanUsername" style="display: none;">Mínimo de 5 caracteres</span>
+
         <input id="passwordSingup" type="password" placeholder="password" autocomplete="off">
+        <span class="msg-error" id="spanPasswordSingup" style="display: none;">Mínimo de 6 caracteres</span>
         <i class="fa fa-eye" aria-hidden="true"></i>
+
+
         <input id="passwordSingupConfirm" type="password" placeholder="confirm password">
+        <span class="msg-error" id="spanPasswordSingupConfirm" style="display: none;">Senhas não conferem</span>
         <i class="fa fa-eye confirm" aria-hidden="true"></i>
 
 
