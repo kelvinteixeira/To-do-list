@@ -52,7 +52,7 @@ input[type="email"] {
   font-weight: bold;
 }
 
-input[type="submit"] {
+button {
   width: 40%;
   height: 40px;
   cursor: pointer;
@@ -73,7 +73,7 @@ form input[type="password"]:focus {
   outline: 0;
 }
 
-form input[type="submit"]:hover {
+form button:hover {
   background-color: rgb(23, 16, 31);
 }
 

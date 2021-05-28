@@ -16,6 +16,9 @@
     <form>
         <h3>Sing up formulary</h3>
 
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
+
 
         <input id="name" type="text" placeholder="name" autocomplete="off">
         <span class="msg-error" id="spanName" style="display: none;">Mínimo de 3 caracteres</span>
@@ -36,7 +39,7 @@
         <i class="fa fa-eye confirm" aria-hidden="true"></i>
 
 
-        <input onclick="singup()" type="submit" value="Sing up">
+        <button onclick="singup(); return false">Sing up</button>
     </form>
 
     <script src="../singup/script.js"></script>

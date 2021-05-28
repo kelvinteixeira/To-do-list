@@ -21,6 +21,9 @@ let passwordSingupConfirm = document.querySelector('#passwordSingupConfirm');
 let spanPasswordSingupConfirm = document.querySelector('#spanPasswordSingupConfirm')
 let validPasswordSingupConfirm = false;
 
+let msgError = document.getElementById('msgError')
+let msgSuccess = document.getElementById('msgSuccess')
+
 nome.addEventListener('keyup', () => {
   if (nome.value.length < 3) {
     nome.setAttribute('style', 'border-color: red');
@@ -118,9 +121,30 @@ function validacaoEmail(email) {
 
 function singup() {
   if (validName && validEmail && validUsername && validPasswordSingup && validPasswordSingupConfirm) {
-    alert('Cadastro efetuado com sucesso');
+
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
+    listaUser.push({
+      nameStorage: nome.value,
+      emailStorage: email.value,
+      usernameStorage: username.value,
+      passwordStorage: passwordSingup.value,
+    })
+
+    localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
+    msgSuccess.setAttribute('style', 'display: block')
+    msgSuccess.innerHTML = 'Cadastrando usuário...'
+    msgError.setAttribute('style', 'display: none')
+    msgError.innerHTML= ''
+
+    setTimeout(() => {
+      window.location.href = 'http://127.0.0.1:5500/login/index.html'
+    }, 3000)
   } else {
-    alert('Dados incorretos!')
+    msgError.setAttribute('style', 'display: block')
+    msgError.innerHTML= 'Preencha todos os campos corretamente!'
+    msgSuccess.setAttribute('style', 'display: none')
+    msgSuccess.innerHTML = ''
   }
   
 }
